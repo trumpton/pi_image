@@ -1,0 +1,16 @@
+hostname   - Changes the hostname from the default 'raspberrypi'
+
+overlayfs -  Overlay Filesystem (overlays a ramdisk to minimise 
+             the possibility of corruption of the card)
+
+removeswap - Prevents swapfile from starting
+
+updatemotd - Updates the welcome message of the day to indicate
+             the read/write state of the filesystem
+
+usbhome    - Mount USB device as /usbhome and create a user on
+             it.
+
+adduser    - Adds an admin and a mortal user (in /home and /usbhome)
+             And forces a password change for them and the 'pi' user
+

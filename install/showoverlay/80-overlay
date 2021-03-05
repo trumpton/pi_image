@@ -1,0 +1,12 @@
+#!/bin/sh
+
+str=$(mount | grep ' on / ')
+
+if echo $str | grep -q 'overlay'; then
+        printf "\nINFO: / MOUNTED READ-ONLY WITH OVERLAY\n"
+elif echo $str | grep -q 'rw'; then
+        printf "\nINFO: / MOUNTED READ-WRITE\n"
+else
+        printf "\nWARNING: / UNKNOWN OVERLAY STATE\n"
+fi
+printf "use 'overctl' to modify read/write state\n"

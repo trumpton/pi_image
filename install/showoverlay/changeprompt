@@ -1,0 +1,15 @@
+if [[ "$(mount | grep overlay)" != "" ]]; then
+  OVER="OVERLAY-RO"
+  COLR="\e[31m"
+else
+  OVER="RW"
+  COLR="\e[32m"
+fi
+
+if [ "$(echo "$PS1" | cut -c1)" = "$(whoami | cut -c1)" ]; then
+  COLR=""
+fi
+
+PS1="$COLR$OVER:$PS1"
+
+unset OVER COLR
