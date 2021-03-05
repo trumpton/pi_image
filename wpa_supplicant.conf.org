@@ -24,10 +24,10 @@
 # work!
 
 ## WPA/WPA2 secured
-network={
- ssid="<<NETWORK SSID>>"
- psk="<<NETWORK PASSWORD>>"
-}
+#network={
+# ssid="put SSID here"
+# psk="put network password here"
+#}
 
 ## Open/unsecured
 #network={
