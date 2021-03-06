@@ -9,9 +9,12 @@ They contain scripts which are designed to run on a linux host system to
 initialise and pre-install the memory card.
 
 In addition to setting up the machine, they also allow for a usb device to
-be mounted which contains the user home directories.
+be mounted read/write which contains the user home directories.
 
 The script has been tested on Ubuntu Studio 20.
+
+The overlay control comes from "ghollingworth/overlayfs" on github and its 
+license file can be found in the install/overlayfs folder.
 
 INGREDIENTS
 ===========
@@ -44,6 +47,9 @@ And unpack the file to reveal the .img data file
 
 3. Setting up your Network
 --------------------------
+
+If you are going to use the Pi wirelessly, you can pre-configure the wireless
+connection before inserting the OS memory card for a truly headless install.
 
 Generate wpa_supplicant.conf, and edit it to configure your wireless network.
 
@@ -119,4 +125,8 @@ Enable the overlay and reboot:
     sudo overctl -r
     sync ; sudo reboot
 
+10. Links
+---------
+
+overlayfs: https://github.com/ghollingworth/overlayfs
 
